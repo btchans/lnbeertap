@@ -25,20 +25,20 @@ password = "3141592653"
 # CHANGE TO YOUR REPOSITORY INFO
 # Repository must be public if no personal access token is supplied
 user = 'btchans'
-repository = 'LN-Beertap'
+repository = 'lnbeertap'
 token = ''
 
 # Don't remove ugit.py from the ignore_files unless you know what you are doing :D
 # Put the files you don't want deleted or updated here use '/filename.ext'
-ignore_files = ['/ugit.py', '/doc', '/LN-Beertap.code-workspace', '/.gitignore', '/README.md', '/pymakr.conf', '/3d']
+ignore_files = ['/ugit.py','3d/3DPrint.blend','3d/ESP-Bracket.stl','3d/Servo-Bracket.stl','3d/Servo-Adapter.stl', 'doc/videos/Configure.mp4','doc/videos/Install and Use.mp4', 'doc/schematic.png','doc/wiring_diagram.png']
 ignore = ignore_files
 ### -----------END OF USER VARIABLES ----------####
 
 # Static URLS
 # GitHub uses 'main' instead of master for python repository trees
-giturl = 'https://codeberg.org/{user}/{repository}'
-call_trees_url = f'https://api.codeberg.org/repos/{user}/{repository}/git/trees/main?recursive=1'
-raw = f'https://raw.codeberg.org/{user}/{repository}/master/'
+giturl = 'https://github.com/{user}/{repository}'
+call_trees_url = f'https://api.github.com/repos/{user}/{repository}/git/trees/master?recursive=1'
+raw = f'https://raw.githubusercontent.com/{user}/{repository}/master/'
 
 def pull(f_path,raw_url):
   print(f'pulling {f_path} from github')
